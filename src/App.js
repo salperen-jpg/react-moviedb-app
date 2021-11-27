@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Components/Home';
-// import SingleMovie from './Components/SingleMovie';
+import SingleMovie from './Components/SingleMovie';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Route path='/' exact>
           <Home />
         </Route>
-        {/* <Route path='/movies/:id' children={<SingleMovie />}></Route> */}
+        <Route path='/movies/:id' children={<SingleMovie />}></Route>
       </Switch>
     </Router>
   );

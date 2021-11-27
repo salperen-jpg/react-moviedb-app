@@ -24,7 +24,6 @@
 }
 body {
   background: var(--clr-body);
-  color: var(--clr-text);
 }
 
 img {
@@ -59,7 +58,6 @@ h4 {
   font-size: 0.875rem;
 }
 p {
-  margin-bottom: 1.25rem;
   color: var(--clr-text);
 }
 @media screen and (min-width: 800px) {
@@ -84,6 +82,18 @@ p {
   h4 {
     line-height: 1;
   }
+}
+.btn-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.primary-btn {
+  padding: 0.775rem 1.5rem;
+  background: var(--clr-tertiary);
+  color: var(--clr-text);
+  border-radius: var(--radius);
+  border: transparent;
+  font-size: 1.2rem;
 }
 .section-center {
   width: 90vw;
@@ -131,6 +141,12 @@ p {
 }
 .input:focus {
   max-width: 600px;
+}
+
+.error {
+  color: red;
+  text-transform: capitalize;
+  font-size: 1.2rem;
 }
 /* MOVIES */
 .movies {
@@ -230,5 +246,95 @@ p {
   100% {
     transform: translateX(0px);
     opacity: 1;
+  }
+}
+
+/* SINGLE MOVIE */
+
+/* MOVIE TITLE */
+.movie-title {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.img-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(100%);
+  padding: 1rem;
+  transition: var(--transition);
+}
+.img-container:hover .img-icons {
+  transform: translateY(0);
+}
+i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 0.2rem;
+}
+
+.img-icons p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.single-movie {
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+  background: var(--clr-secondary);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.single-movie img {
+  max-height: 35rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.movie-detail {
+  margin-top: 1rem;
+}
+.single-info {
+  margin-top: 0.5rem;
+}
+.movie-detail span {
+  font-size: 1.2rem;
+}
+.awards {
+  color: #716040;
+}
+.att {
+  color: var(--clr-tertiary);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .single-movie {
+    grid-template-columns: auto 1fr;
+  }
+
+  .movie-detail {
+    margin-top: 0;
+  }
+  .single-info {
+    margin-top: 1rem;
+  }
+  .subject {
+    max-width: 30rem;
+    margin: 0 auto;
   }
 }
