@@ -4,7 +4,9 @@ const SearchForm = () => {
   const { search, setSearch, error } = useGlobalContext();
 
   const submitHandler = (e) => {
-    e.preventDefault();
+    if (e === 'ENTER') {
+      e.preventDefault();
+    }
   };
   return (
     <div className='section-center search-form'>

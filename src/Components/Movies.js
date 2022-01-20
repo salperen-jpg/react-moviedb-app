@@ -8,7 +8,7 @@ const defaultImg =
 const Movies = () => {
   const { isLoading, movies } = useGlobalContext();
   if (isLoading) {
-    return <div className='loading'>...Loading</div>;
+    return <div className='loading'></div>;
   }
   return (
     <section className='section-center movies'>
